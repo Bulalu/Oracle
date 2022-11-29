@@ -18,7 +18,7 @@ def deploy_oracle():
     # fund the oracle smart contract with some link tokens
     link_contract = interface.IERC20(link_address)
 
-    print(f"Elisha's Link balance {link_contract.balanceOf(owner)}")
+    print(f"Owner's Link balance {link_contract.balanceOf(owner)}")
     print(owner)
 
     if link_contract.balanceOf(owner) >= amount_to_transfer and link_contract.balanceOf(oracle_contract) < 1 * 10**18:
